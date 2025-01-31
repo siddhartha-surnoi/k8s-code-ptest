@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: labels-demo
-  namespace: Sidhu-namespaces
+  namespace: sidhu-namespaces
   labels: 
    project: label-k8s
    module: FE

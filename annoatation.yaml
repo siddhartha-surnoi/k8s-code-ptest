@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: annotation-demo 
-  namespace: Sidhu-namespaces
+  namespace: sidhu-namespaces
   annotations: 
    project: annotation-k8s
    module: FE

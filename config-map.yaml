@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: Sidhu-namespaces
+  namespace: sidhu-namespaces
 data:
   username: sidhu
   course: devops
