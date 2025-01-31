@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: annotation-demo 
+  annotation: 
+   project: annotation-k8s
+   module: FE
+   environment: dev
+spec:
+  containers:
+   - name: nginx-con1
+     image: nginx

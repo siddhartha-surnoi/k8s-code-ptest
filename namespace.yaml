@@ -1,0 +1,5 @@
+apiVersion:
+kind : Namespace
+metadata:
+  namespace: test-k8s
+  name: namespaces-demo
