@@ -1,5 +1,5 @@
 apiVersion:
 kind : Namespace
 metadata:
-  namespace: test-k8s
+  namespace: Sidhu-namespaces
   name: namespaces-demo
