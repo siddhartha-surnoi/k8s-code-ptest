@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: cluster-ip-svc
-  namespace: Sidhu-namespaces
+  namespace: sidhu-namespaces
   labels: 
-   project: service-sidhu
-   module: be
-   environment: dev
+    project: service-sidhu
+    module: be
+    environment: dev
 spec:
   containers:
   - name: app-nginx-cip
@@ -19,24 +19,20 @@ spec:
         memory: "128Mi"
         cpu: "500m"
 
-
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: nginx
-  namespace: Sidhu-namespaces
+  namespace: sidhu-namespaces
 spec:
-selector:
+  type: ClusterIP
+  selector:
     project: service-sidhu
     module: be
     environment: dev
-    containers:
-    - name: nginx-cip
-    image: nginx:stable
-    ports:
-      - name: nginx-service-cip-port
-        containerPort: 80
-        targetPort: 80
-        nodePort: 30007
-
+  ports:
+  - name: nginx-service-cip-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
